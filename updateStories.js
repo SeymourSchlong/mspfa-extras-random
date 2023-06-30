@@ -28,6 +28,8 @@ const updateStories = async () => {
     ) {
         passes++;
 
+        stories.push({ i: '2' });
+
         await fetch("https://mspfa.com/", {
             method: "POST",
             headers: {
