@@ -1,4 +1,4 @@
-const fetch = require("isomorphic-fetch");
+const fetch = require("node-fetch");
 
 const dayInMilliseconds = 1000 * 60 * 60 * 24;
 let searchDate = new Date().getTime() - 2600000 * 1000;
