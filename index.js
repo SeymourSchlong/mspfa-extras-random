@@ -13,7 +13,7 @@ app.use(cors({ methods: "GET", origin: "*" }));
 
 // Get story data
 updateStories();
-app.get('/', stories);
+app.get('/', stories.join(',') || 'No stories');
 setInterval(updateStories, dayInMilliseconds);
 
 // GET random MSPFA story
