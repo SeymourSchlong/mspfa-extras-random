@@ -4,6 +4,7 @@ const {
     dayInMilliseconds,
     updateStories,
     getStory,
+    stories,
 } = require("./updateStories");
 
 // App setup
@@ -12,6 +13,7 @@ app.use(cors({ methods: "GET", origin: "*" }));
 
 // Get story data
 updateStories();
+app.get('/', stories);
 setInterval(updateStories, dayInMilliseconds);
 
 // GET random MSPFA story
