@@ -4,7 +4,6 @@ const {
     dayInMilliseconds,
     updateStories,
     getStory,
-    stories,
 } = require("./updateStories");
 
 // App setup
