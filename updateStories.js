@@ -22,8 +22,6 @@ const updateStories = async () => {
     let offset = 0;
     let passes = 0;
 
-    console.log('test');
-
     while (
         (stories.length == 0 || stories[stories.length - 1].u > searchDate) &&
         passes < 10
