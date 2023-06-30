@@ -4,6 +4,7 @@ const {
     dayInMilliseconds,
     updateStories,
     getStory,
+    stories,
 } = require("./updateStories");
 
 // App setup
@@ -14,7 +15,7 @@ app.use(cors({ methods: "GET", origin: "*" }));
 updateStories();
 app.get('/', (req, res) => {
     res.status(200).send(
-        'test'
+        `Stories: ${stories.join(', ')}`
     );
 });
 setInterval(updateStories, dayInMilliseconds);
