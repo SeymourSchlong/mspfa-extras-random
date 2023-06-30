@@ -15,7 +15,7 @@ app.use(cors({ methods: "GET", origin: "*" }));
 updateStories();
 app.get('/', (req, res) => {
     res.status(200).send(
-        `Stories: ${stories.join(', ')}`
+        `Stories: ${stories ? stories : 'no stories'}`
     );
 });
 setInterval(updateStories, dayInMilliseconds);
